@@ -1,0 +1,44 @@
+# Makefile for UNIX 
+
+# the compiler: gcc for C program, define as g++ for C++
+CC = gcc
+
+# the static library archiver
+AR = ar rcs
+
+# compiler flags:
+# -g enable debugging
+# -Wall turn on all warnings 
+# -D__USE_FIXED_PROTOTYPES__ force the compiler to use the correct headers 
+# -ansi don’t use GNU extensions, stick to ANSI (c89) 
+# -std=c99 use newer version 
+CFLAGS=-g -Wall -D_USE_FIXED_PROTOTYPES__ -std=c99
+
+# libraries
+# custom 
+UNIT_TESTS_LIBRARY = ../unit_tests/libunit_tests.a
+
+# the build target executable: 
+TARGET = nsd 
+LIBRARY = libnsd.a 
+
+# source files 
+SOURCE_FILES = network_service_discovery.o
+
+# test source files
+TEST_SOURCE_FILES = 
+
+all: $(TARGET)
+
+$(TARGET): main.c $(LIBRARY) $(TEST_SOURCE_FILES)
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(TEST_SOURCE_FILES) $(LIBRARY) $(UNIT_TESTS_LIBRARY) 
+
+$(LIBRARY): $(SOURCE_FILES)
+	$(AR) $(LIBRARY) $(SOURCE_FILES)
+
+network_service_discovery.o: network_service_discovery.c, network_service_discovery.h
+	$(CC) $(CFLAGS) -c network_service_discovery.c
+
+clean: 
+	$(RM) $(TARGET) $(TARGET).exe $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)
+ 

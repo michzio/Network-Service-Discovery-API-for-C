@@ -1,0 +1,10 @@
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/install/strip.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/install.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/list_install_components.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Network_Service_Discovery.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/install/local.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Install_Network_Service_Discovery.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir

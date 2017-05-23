@@ -1,0 +1,3 @@
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/libnsd_shared.dylib
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd.a
