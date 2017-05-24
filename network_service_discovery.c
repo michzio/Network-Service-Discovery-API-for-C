@@ -3,8 +3,20 @@
 //
 
 #include "network_service_discovery.h"
+
+#ifdef __APPLE__
+    #include "apple/event_loop.h"
+#endif
+
+#ifdef __unix__
+    #include "unix/event_loop.h"
+#endif
+
 #include <errno.h>
 #include <stdio.h>
+#include <pthread.h>
+#include <string.h>
+#include <CoreFoundation/CoreFoundation.h>
 
 #define LONG_TIME 100000000
 
@@ -52,6 +64,8 @@ void *_nsd_simple_register(void *register_attrs) {
 
     nsd_register_attrs_t *ra = (nsd_register_attrs_t *)register_attrs;
     nsd_simple_register(ra->regtype, ra->port, ra->callback);
+
+    return 0;
 }
 
 int nsd_spawn_simple_register(const char *regtype, uint16_t port, nsd_register_callback_t callback) {
@@ -106,6 +120,8 @@ void *_nsd_register(void *register_attrs) {
 
     nsd_register_attrs_t *ra = (nsd_register_attrs_t *)register_attrs;
     nsd_register(ra->name, ra->regtype, ra->domain, ra->host, ra->port, ra->callback);
+
+    return 0;
 }
 
 int nsd_spawn_register(const char *name, const char *regtype, const char *domain,
@@ -195,6 +211,8 @@ void *_nsd_browse(void *browse_attrs) {
 
     nsd_browse_attrs_t *ba = (nsd_browse_attrs_t *)browse_attrs;
     nsd_browse(ba->regtype, ba->domain, ba->callback);
+
+    return 0;
 }
 
 int nsd_spawn_browse(const char *regtype, const char *domain, nsd_browse_callback_t callback) {
@@ -233,7 +251,7 @@ static void nsd_resolve_main_callback(DNSServiceRef serviceRef,
                                       const char *hosttarget,
                                       uint16_t port,
                                       uint16_t txtLen,
-                                      const char *txtRecord,
+                                      const unsigned char *txtRecord,
                                       void *context) {
 
     if(errorCode == kDNSServiceErr_NoError) {
@@ -244,8 +262,7 @@ static void nsd_resolve_main_callback(DNSServiceRef serviceRef,
         if(context)
             ((nsd_resolve_callback_wrapper_t *)context)->callback(interfaceIndex, fullname, hosttarget, port, nsd_flags);
 
-        nsd_free(serviceRef); // to enable later service discovery and do not block thread with handle resolve events loop
-
+        // IMPORTANT! nsd_free(serviceRef); // to enable later service discovery and do not block thread with handle resolve events loop
     } else {
         fprintf(stderr, "nsd_resolve_main_callback: failed! error: %d\n", errorCode);
     }
@@ -288,6 +305,8 @@ void *_nsd_resolve(void *resolve_attrs) {
 
     nsd_resolve_attrs_t *ra = (nsd_resolve_attrs_t *)resolve_attrs;
     nsd_resolve(ra->name, ra->regtype, ra->domain, ra->interface_idx, ra->callback);
+
+    return 0;
 }
 
 int nsd_spawn_resolve(const char *name, const char *regtype, const char *domain,
@@ -315,45 +334,6 @@ int nsd_spawn_resolve(const char *name, const char *regtype, const char *domain,
     }
     return 0;
 }
-
-void nsd_handle_events(DNSServiceRef serviceRef) {
-
-    // get file descriptor of DNS service for the Unix Domain Socket
-    // used to communicate with the mdnsd deamon running in the background
-    int dns_sd_fd = DNSServiceRefSockFD(serviceRef);
-    int nfds = dns_sd_fd + 1;
-    fd_set read_fds;
-    struct timeval tv;
-
-    while(1) {
-
-        FD_ZERO(&read_fds);
-        FD_SET(dns_sd_fd, &read_fds);
-
-        tv.tv_sec = time_out;
-        tv.tv_usec = 0;
-        int result = select(nfds, &read_fds, (fd_set *) NULL, (fd_set *) NULL, &tv);
-        if( result > 0) {
-
-            DNSServiceErrorType  err = kDNSServiceErr_NoError;
-
-            if(FD_ISSET(dns_sd_fd, &read_fds)) {
-                // DNSServiceProcessResult() should be called when data are ready to read
-                // otherwise it will block and wait until there are some data
-                err = DNSServiceProcessResult(serviceRef);
-                if(err) break;
-            }
-        } else {
-
-            fprintf(stderr, "select() returned %d errno %d %s \n", result, errno, strerror(errno));
-            if(errno != EINTR) break;
-        }
-    }
-
-    // remove dns_sd_fd file descriptor from FD_SET
-    FD_CLR(dns_sd_fd, &read_fds);
-}
-
 
 void nsd_free(DNSServiceRef serviceRef) {
 

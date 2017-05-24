@@ -24,7 +24,6 @@ void nsd_resolve(const char *name, const char *regtype, const char *domain,
                  const uint32_t interface_idx, nsd_resolve_callback_t callback);
 int nsd_spawn_resolve(const char *name, const char *regtype, const char *domain,
                  const uint32_t interface_idx, nsd_resolve_callback_t callback);
-void nsd_handle_events(DNSServiceRef serviceRef);
 void nsd_free(DNSServiceRef serviceRef);
 
 #endif //NETWORKSERVICEDISCOVERYAPI_NETWORK_SERVICE_DISCOVERY_H

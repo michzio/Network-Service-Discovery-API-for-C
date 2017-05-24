@@ -206,6 +206,36 @@ Network_Service_Discovery_Lib/fast:
 	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/build
 .PHONY : Network_Service_Discovery_Lib/fast
 
+apple/event_loop.o: apple/event_loop.c.o
+
+.PHONY : apple/event_loop.o
+
+# target to build an object file
+apple/event_loop.c.o:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/apple/event_loop.c.o
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.o
+.PHONY : apple/event_loop.c.o
+
+apple/event_loop.i: apple/event_loop.c.i
+
+.PHONY : apple/event_loop.i
+
+# target to preprocess a source file
+apple/event_loop.c.i:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/apple/event_loop.c.i
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.i
+.PHONY : apple/event_loop.c.i
+
+apple/event_loop.s: apple/event_loop.c.s
+
+.PHONY : apple/event_loop.s
+
+# target to generate assembly for a file
+apple/event_loop.c.s:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/apple/event_loop.c.s
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.s
+.PHONY : apple/event_loop.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -263,6 +293,66 @@ network_service_discovery.c.s:
 	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.s
 .PHONY : network_service_discovery.c.s
 
+unix/event_loop.o: unix/event_loop.c.o
+
+.PHONY : unix/event_loop.o
+
+# target to build an object file
+unix/event_loop.c.o:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/unix/event_loop.c.o
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.o
+.PHONY : unix/event_loop.c.o
+
+unix/event_loop.i: unix/event_loop.c.i
+
+.PHONY : unix/event_loop.i
+
+# target to preprocess a source file
+unix/event_loop.c.i:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/unix/event_loop.c.i
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.i
+.PHONY : unix/event_loop.c.i
+
+unix/event_loop.s: unix/event_loop.c.s
+
+.PHONY : unix/event_loop.s
+
+# target to generate assembly for a file
+unix/event_loop.c.s:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/unix/event_loop.c.s
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.s
+.PHONY : unix/event_loop.c.s
+
+windows/event_loop.o: windows/event_loop.c.o
+
+.PHONY : windows/event_loop.o
+
+# target to build an object file
+windows/event_loop.c.o:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/windows/event_loop.c.o
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.o
+.PHONY : windows/event_loop.c.o
+
+windows/event_loop.i: windows/event_loop.c.i
+
+.PHONY : windows/event_loop.i
+
+# target to preprocess a source file
+windows/event_loop.c.i:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/windows/event_loop.c.i
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.i
+.PHONY : windows/event_loop.c.i
+
+windows/event_loop.s: windows/event_loop.c.s
+
+.PHONY : windows/event_loop.s
+
+# target to generate assembly for a file
+windows/event_loop.c.s:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/windows/event_loop.c.s
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.s
+.PHONY : windows/event_loop.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -279,12 +369,21 @@ help:
 	@echo "... Network_Service_Discovery_Lib_Static"
 	@echo "... Install_Network_Service_Discovery"
 	@echo "... Network_Service_Discovery_Lib"
+	@echo "... apple/event_loop.o"
+	@echo "... apple/event_loop.i"
+	@echo "... apple/event_loop.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... network_service_discovery.o"
 	@echo "... network_service_discovery.i"
 	@echo "... network_service_discovery.s"
+	@echo "... unix/event_loop.o"
+	@echo "... unix/event_loop.i"
+	@echo "... unix/event_loop.s"
+	@echo "... windows/event_loop.o"
+	@echo "... windows/event_loop.i"
+	@echo "... windows/event_loop.s"
 .PHONY : help
 
 

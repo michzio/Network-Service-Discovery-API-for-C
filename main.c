@@ -21,7 +21,6 @@ void browse_callback(uint32_t interface_idx,
 
     if(flags & ADDED) {
         printf("NSD ADDED: %d | %s | %s | %s\n", interface_idx, service_name, regtype, domain);
-        nsd_resolve(service_name, regtype, domain, interface_idx, resolve_callback);
     } else if(flags & REMOVED) {
         printf("NSD REMOVED:  %d | %s | %s | %s\n", interface_idx, service_name, regtype, domain);
     }
@@ -38,16 +37,18 @@ void register_callback(const char *name, const char *regtype, const char *domain
 int main() {
     printf("Network Service Discovery API\n");
 
+
+
     //nsd_simple_register("_remotely_click._tcp", htons(59600), register_callback);
     //nsd_register("My Remotely", "_remotely_click._tcp", "", "", 6699, register_callback);
     //nsd_spawn_simple_register("_remotely_click._tcp", htons(59600), register_callback);
     //nsd_spawn_register("My Remotely", "_remotely_click._tcp", "", "", 6699, register_callback);
     //nsd_browse("_remotely_click._tcp", NULL, browse_callback);
-    //nsd_spawn_browse("_remotely_click._tcp", NULL, browse_callback);
-    //nsd_resolve("Remotely.Click2", "_remotely_click._tcp", "local", 0, resolve_callback);
-    nsd_spawn_resolve("Remotely.Click2", "_remotely_click._tcp", "local", 0, resolve_callback);
+    nsd_spawn_browse("_remotely_click._tcp", NULL, browse_callback);
+    nsd_resolve("Remotely.Click2", "_remotely_click._tcp", "local", 0, resolve_callback);
+    //nsd_spawn_resolve("Remotely.Click2", "_remotely_click._tcp", "local", 0, resolve_callback);
 
-    sleep(10);
+    //sleep(10);
 
     return 0;
 }

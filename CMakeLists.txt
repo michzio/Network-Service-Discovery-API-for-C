@@ -3,7 +3,7 @@ project(Network_Service_Discovery)
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -std=c99")
-set(SOURCE_FILES network_service_discovery.h network_service_discovery.c)
+set(SOURCE_FILES network_service_discovery.h network_service_discovery.c unix/event_loop.h unix/event_loop.c apple/event_loop.h apple/event_loop.c windows/event_loop.h windows/event_loop.c)
 set(TEST_SOURCE_FILES )
 
 if(CYGWIN)
@@ -12,6 +12,10 @@ if(CYGWIN)
 else()
     # unix
     message("building for Unix")
+endif()
+
+if(APPLE)
+    find_library(COREFOUNDATION_LIBRARY CoreFoundation)
 endif()
 
 # libraries paths
@@ -26,9 +30,15 @@ endif()
 
 add_library(Network_Service_Discovery_Lib SHARED ${SOURCE_FILES})
 set_target_properties(Network_Service_Discovery_Lib PROPERTIES OUTPUT_NAME nsd_shared)
+if(APPLE)
+    target_link_libraries(Network_Service_Discovery_Lib ${COREFOUNDATION_LIBRARY})
+endif()
 
 add_library(Network_Service_Discovery_Lib_Static ${SOURCE_FILES})
 set_target_properties(Network_Service_Discovery_Lib_Static PROPERTIES OUTPUT_NAME nsd)
+if(APPLE)
+    target_link_libraries(Network_Service_Discovery_Lib_Static ${COREFOUNDATION_LIBRARY})
+endif()
 
 add_executable(Network_Service_Discovery main.c ${TEST_SOURCE_FILES})
 set_target_properties(Network_Service_Discovery PROPERTIES OUTPUT_NAME nsd)

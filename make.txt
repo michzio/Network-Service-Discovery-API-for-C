@@ -12,9 +12,19 @@ AR = ar rcs
 # -D__USE_FIXED_PROTOTYPES__ force the compiler to use the correct headers 
 # -ansi don’t use GNU extensions, stick to ANSI (c89) 
 # -std=c99 use newer version 
-CFLAGS=-g -Wall -D_USE_FIXED_PROTOTYPES__ -std=c99
+CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99
 
 # libraries
+ifneq ($(OS), Windows_NT)
+	UNAME_S := $(shell uname -s)
+	ifeq ($(UNAME_S), Darwin)
+	  # OS X
+	  OS_X_LIBS += -framework CoreFoundation
+	endif
+else
+   OS_X_LIBS = 
+endif
+
 # custom 
 UNIT_TESTS_LIBRARY = ../unit_tests/libunit_tests.a
 
@@ -23,7 +33,7 @@ TARGET = nsd
 LIBRARY = libnsd.a 
 
 # source files 
-SOURCE_FILES = network_service_discovery.o
+SOURCE_FILES = network_service_discovery.o event_loop.o
 
 # test source files
 TEST_SOURCE_FILES = 
@@ -31,13 +41,33 @@ TEST_SOURCE_FILES =
 all: $(TARGET)
 
 $(TARGET): main.c $(LIBRARY) $(TEST_SOURCE_FILES)
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(TEST_SOURCE_FILES) $(LIBRARY) $(UNIT_TESTS_LIBRARY) 
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(TEST_SOURCE_FILES) $(LIBRARY) $(UNIT_TESTS_LIBRARY) $(OS_X_LIBS)
 
 $(LIBRARY): $(SOURCE_FILES)
 	$(AR) $(LIBRARY) $(SOURCE_FILES)
 
-network_service_discovery.o: network_service_discovery.c, network_service_discovery.h
+network_service_discovery.o: network_service_discovery.c network_service_discovery.h
 	$(CC) $(CFLAGS) -c network_service_discovery.c
+
+ifeq ($(OS), Windows_NT)
+	# WINDOWS
+event_loop.o: windows/event_loop.c windows/event_loop.h
+	$(CC) $(CFLAGS) -c windows/event_loop.c
+else
+
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S), Darwin)
+# OS X
+event_loop.o: apple/event_loop.c apple/event_loop.h
+	$(CC) $(CFLAGS) -c apple/event_loop.c
+
+else
+# UNIX
+event_loop.o: unix/event_loop.c unix/event_loop.h
+	$(CC) $(CFLAGS) -c unix/event_loop.c
+
+endif
+endif
 
 clean: 
 	$(RM) $(TARGET) $(TARGET).exe $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)

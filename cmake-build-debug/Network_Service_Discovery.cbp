@@ -214,6 +214,14 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.c">
+			<Option target="Network_Service_Discovery_Lib_Static"/>
+			<Option target="Network_Service_Discovery_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h">
+			<Option target="Network_Service_Discovery_Lib_Static"/>
+			<Option target="Network_Service_Discovery_Lib"/>
+		</Unit>
 		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/main.c">
 			<Option target="Network_Service_Discovery"/>
 		</Unit>
@@ -222,6 +230,22 @@
 			<Option target="Network_Service_Discovery_Lib"/>
 		</Unit>
 		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h">
+			<Option target="Network_Service_Discovery_Lib_Static"/>
+			<Option target="Network_Service_Discovery_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.c">
+			<Option target="Network_Service_Discovery_Lib_Static"/>
+			<Option target="Network_Service_Discovery_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.h">
+			<Option target="Network_Service_Discovery_Lib_Static"/>
+			<Option target="Network_Service_Discovery_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.c">
+			<Option target="Network_Service_Discovery_Lib_Static"/>
+			<Option target="Network_Service_Discovery_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.h">
 			<Option target="Network_Service_Discovery_Lib_Static"/>
 			<Option target="Network_Service_Discovery_Lib"/>
 		</Unit>
