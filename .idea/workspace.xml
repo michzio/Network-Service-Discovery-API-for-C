@@ -15,50 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d0c6efd-97d7-4ebe-a3fc-38de2baab2f9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apple/event_loop.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apple/event_loop.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unix/event_loop.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unix/event_loop.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/windows/event_loop.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/windows/event_loop.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery.dir/main.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/network_service_discovery.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/network_service_discovery.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/libnsd.a" afterPath="$PROJECT_DIR$/cmake-build-debug/libnsd.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/libnsd_shared.dylib" afterPath="$PROJECT_DIR$/cmake-build-debug/libnsd_shared.dylib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/nsd" afterPath="$PROJECT_DIR$/cmake-build-debug/nsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/unix/bin/nsd" afterPath="$PROJECT_DIR$/output/unix/bin/nsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/unix/lib/libnsd_shared.dylib" afterPath="$PROJECT_DIR$/output/unix/lib/libnsd_shared.dylib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/unix/lib/static/libnsd.a" afterPath="$PROJECT_DIR$/output/unix/lib/static/libnsd.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Network_Service_Discovery.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Network_Service_Discovery.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/make.txt" afterPath="$PROJECT_DIR$/make.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network_service_discovery.c" afterPath="$PROJECT_DIR$/network_service_discovery.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network_service_discovery.h" afterPath="$PROJECT_DIR$/network_service_discovery.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/windows/event_loop.c" afterPath="$PROJECT_DIR$/windows/event_loop.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,103 +28,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="network_service_discovery.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network_service_discovery.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="264" column="20" lean-forward="false" selection-start-line="264" selection-start-column="20" selection-end-line="264" selection-end-column="20" />
-              <folding>
-                <element signature="e#169#197#0" expanded="true" />
-                <element signature="e#206#224#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event_loop.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apple/event_loop.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="84" column="49" lean-forward="false" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
-              <folding>
-                <element signature="e#68#91#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event_loop.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apple/event_loop.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="188" lean-forward="false" selection-start-line="5" selection-start-column="188" selection-end-line="5" selection-end-column="188" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="make.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/make.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event_loop.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unix/event_loop.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event_loop.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/windows/event_loop.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#65#258#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event_loop.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="event_loop.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/windows/event_loop.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-              <folding>
-                <element signature="e#64#144#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="213">
+              <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,8 +43,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>_remotely_click.</find>
-      <find>browse</find>
       <find>nsd_remove_event_source</find>
+      <find>browse</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,9 +62,9 @@
         <option value="$PROJECT_DIR$/network_service_discovery.c" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/windows/event_loop.h" />
-        <option value="$PROJECT_DIR$/windows/event_loop.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/make.txt" />
+        <option value="$PROJECT_DIR$/windows/event_loop.c" />
       </list>
     </option>
   </component>
@@ -209,8 +75,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="44" />
-    <option name="y" value="67" />
+    <option name="x" value="53" />
+    <option name="y" value="180" />
     <option name="width" value="1281" />
     <option name="height" value="715" />
   </component>
@@ -483,15 +349,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495470792529</updated>
-      <workItem from="1495470794416" duration="34263000" />
+      <workItem from="1495470794416" duration="34933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34263000" />
+    <option name="totallyTimeSpent" value="34933000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="67" width="1281" height="715" extended-state="0" />
+    <frame x="53" y="180" width="1281" height="715" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30176565" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -499,8 +366,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30176565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44462278" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27845037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44462278" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27845037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -543,21 +410,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network_service_discovery.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="264" column="20" lean-forward="false" selection-start-line="264" selection-start-column="20" selection-end-line="264" selection-end-column="20" />
-          <folding>
-            <element signature="e#169#197#0" expanded="true" />
-            <element signature="e#206#224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unix/event_loop.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="188" lean-forward="false" selection-start-line="5" selection-start-column="188" selection-end-line="5" selection-end-column="188" />
           <folding />
         </state>
       </provider>
@@ -590,6 +462,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/network_service_discovery.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="264" column="20" lean-forward="false" selection-start-line="264" selection-start-column="20" selection-end-line="264" selection-end-column="20" />
+          <folding>
+            <element signature="e#169#197#0" expanded="true" />
+            <element signature="e#206#224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/windows/event_loop.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -602,26 +485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/windows/event_loop.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="e#64#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="188" lean-forward="false" selection-start-line="5" selection-start-column="188" selection-end-line="5" selection-end-column="188" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/make.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="213">
+          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
           <folding />
         </state>
       </provider>
