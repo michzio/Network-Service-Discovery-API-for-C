@@ -2,10 +2,20 @@
 // Created by Michal Ziobro on 22/05/2017.
 //
 
-#include "dns_sd.h"
-
 #ifndef NETWORKSERVICEDISCOVERYAPI_NETWORK_SERVICE_DISCOVERY_H
 #define NETWORKSERVICEDISCOVERYAPI_NETWORK_SERVICE_DISCOVERY_H
+
+#ifdef __APPLE__
+#include <dns_sd.h>
+#endif // __APPLE__
+
+#ifdef _WIN32
+#include "../../../../../../../Program Files/Bonjour SDK/Include/dns_sd.h"
+#endif // _WIN32
+
+#ifdef __unix__
+#include <dns_sd.h>
+#endif // __unix__
 
 typedef enum {ADDED = 1, REMOVED = 2, MORE = 4} nsd_flags_t;
 typedef void (*nsd_register_callback_t)(const char *name, const char *regtype, const char *domain, nsd_flags_t flags);

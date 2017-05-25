@@ -12,15 +12,17 @@
     #include "unix/event_loop.h"
 #endif
 
+#ifdef _WIN32
+    #include "windows/event_loop.h"
+#endif
+
 #include <errno.h>
 #include <stdio.h>
-#include <pthread.h>
 #include <string.h>
-#include <CoreFoundation/CoreFoundation.h>
 
-#define LONG_TIME 100000000
-
-static volatile int time_out = LONG_TIME;
+#ifndef _WIN32
+    #include <pthread.h>
+#endif
 
 struct nsd_register_callback_wrapper {
     nsd_register_callback_t callback;
@@ -68,6 +70,7 @@ void *_nsd_simple_register(void *register_attrs) {
     return 0;
 }
 
+#ifndef _WIN32
 int nsd_spawn_simple_register(const char *regtype, uint16_t port, nsd_register_callback_t callback) {
 
     nsd_register_attrs_t register_attrs = {
@@ -90,6 +93,7 @@ int nsd_spawn_simple_register(const char *regtype, uint16_t port, nsd_register_c
     }
     return 0;
 }
+#endif
 
 void nsd_register(const char *name, const char *regtype, const char *domain,
                   const char *host, uint16_t port, nsd_register_callback_t callback) {
@@ -124,6 +128,7 @@ void *_nsd_register(void *register_attrs) {
     return 0;
 }
 
+#ifndef _WIN32
 int nsd_spawn_register(const char *name, const char *regtype, const char *domain,
                         const char *host, uint16_t port, nsd_register_callback_t callback) {
 
@@ -150,6 +155,7 @@ int nsd_spawn_register(const char *name, const char *regtype, const char *domain
     }
     return 0;
 }
+#endif
 
 struct nsd_browse_callback_wrapper {
     nsd_browse_callback_t callback;
@@ -215,6 +221,7 @@ void *_nsd_browse(void *browse_attrs) {
     return 0;
 }
 
+#ifndef _WIN32
 int nsd_spawn_browse(const char *regtype, const char *domain, nsd_browse_callback_t callback) {
 
     nsd_browse_attrs_t browse_attrs = {
@@ -237,6 +244,7 @@ int nsd_spawn_browse(const char *regtype, const char *domain, nsd_browse_callbac
     }
     return 0;
 }
+#endif
 
 struct nsd_resolve_callback_wrapper {
     nsd_resolve_callback_t callback;
@@ -309,6 +317,7 @@ void *_nsd_resolve(void *resolve_attrs) {
     return 0;
 }
 
+#ifndef WIN32
 int nsd_spawn_resolve(const char *name, const char *regtype, const char *domain,
                       const uint32_t interface_idx, nsd_resolve_callback_t callback) {
 
@@ -334,6 +343,7 @@ int nsd_spawn_resolve(const char *name, const char *regtype, const char *domain,
     }
     return 0;
 }
+#endif
 
 void nsd_free(DNSServiceRef serviceRef) {
 

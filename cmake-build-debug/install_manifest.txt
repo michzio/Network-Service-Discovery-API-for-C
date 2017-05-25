@@ -1,3 +1,4 @@
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/libnsd_shared.dylib
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd.a
+/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd.exe
+/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd_shared.dll.a
+/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/cygnsd_shared.dll
+/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd.a

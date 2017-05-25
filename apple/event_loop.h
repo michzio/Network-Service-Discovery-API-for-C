@@ -15,4 +15,4 @@ void nsd_handle_events(DNSServiceRef serviceRef);
 
 #endif //NETWORK_SERVICE_DISCOVERY_EVENT_LOOP_H_H
 
-#endif
+#endif // __APPLE__

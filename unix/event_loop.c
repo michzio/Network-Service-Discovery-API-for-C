@@ -5,6 +5,14 @@
 #ifdef __unix__
 
 #include "event_loop.h"
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <string.h>
+
+#define LONG_TIME 100000000
+static volatile int time_out = LONG_TIME;
+
 
 void nsd_handle_events(DNSServiceRef serviceRef) {
 

@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Network_Service_Discovery.dir/main.c.o"
   "nsd.pdb"
-  "nsd"
+  "nsd.exe"
+  "libnsd.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "network_service_discovery.h"
 
+#ifndef _WIN32
+    #include <arpa/inet.h>
+#endif
+
 void resolve_callback(uint32_t interface_idx,
                       const char *fullname,
                       const char *hosttarget,
@@ -44,7 +48,7 @@ int main() {
     //nsd_spawn_simple_register("_remotely_click._tcp", htons(59600), register_callback);
     //nsd_spawn_register("My Remotely", "_remotely_click._tcp", "", "", 6699, register_callback);
     //nsd_browse("_remotely_click._tcp", NULL, browse_callback);
-    nsd_spawn_browse("_remotely_click._tcp", NULL, browse_callback);
+    //nsd_spawn_browse("_remotely_click._tcp", NULL, browse_callback);
     nsd_resolve("Remotely.Click2", "_remotely_click._tcp", "local", 0, resolve_callback);
     //nsd_spawn_resolve("Remotely.Click2", "_remotely_click._tcp", "local", 0, resolve_callback);
 

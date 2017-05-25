@@ -6,13 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/main.c
+/cygdrive/c/Program Files/Bonjour SDK/Include/dns_sd.h
+sys/types.h
+-
+sys/types.h
+-
+Tiano.h
+/cygdrive/c/Program Files/Bonjour SDK/Include/Tiano.h
+windows.h
+-
+stdint.h
+-
+dispatch/dispatch.h
+-
+
+/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/main.c
 stdio.h
 -
 network_service_discovery.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
+/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
+arpa/inet.h
+-
 
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
+/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
 dns_sd.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/dns_sd.h
+-
+../../../../../../../Program Files/Bonjour SDK/Include/dns_sd.h
+/cygdrive/c/Program Files/Bonjour SDK/Include/dns_sd.h
+dns_sd.h
+-
 

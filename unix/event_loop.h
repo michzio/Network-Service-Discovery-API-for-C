@@ -4,6 +4,7 @@
 
 #ifdef __unix__
 
+#include <dns_sd.h>
 
 #ifndef NETWORK_SERVICE_DISCOVERY_EVENT_LOOP_H
 #define NETWORK_SERVICE_DISCOVERY_EVENT_LOOP_H
