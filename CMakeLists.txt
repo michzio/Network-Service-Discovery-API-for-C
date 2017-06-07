@@ -45,7 +45,7 @@ elseif(CYGWIN)
 endif()
 
 add_library(Network_Service_Discovery_Lib SHARED ${SOURCE_FILES})
-set_target_properties(Network_Service_Discovery_Lib PROPERTIES OUTPUT_NAME nsd_shared)
+set_target_properties(Network_Service_Discovery_Lib PROPERTIES OUTPUT_NAME nsd)
 if(APPLE)
     target_link_libraries(Network_Service_Discovery_Lib ${COREFOUNDATION_LIBRARY})
 endif()

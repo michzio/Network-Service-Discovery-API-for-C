@@ -34,27 +34,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/michzio/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/michzio/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd
+CMAKE_SOURCE_DIR = /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug
 
 # Utility rule file for Install_Network_Service_Discovery.
 
 # Include the progress variables for this target.
 include CMakeFiles/Install_Network_Service_Discovery.dir/progress.make
 
-CMakeFiles/Install_Network_Service_Discovery: nsd.exe
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Installing Network_Service_Discovery"
+CMakeFiles/Install_Network_Service_Discovery: nsd
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Installing Network_Service_Discovery"
 	$(MAKE) install
 
 Install_Network_Service_Discovery: CMakeFiles/Install_Network_Service_Discovery
@@ -72,6 +72,6 @@ CMakeFiles/Install_Network_Service_Discovery.dir/clean:
 .PHONY : CMakeFiles/Install_Network_Service_Discovery.dir/clean
 
 CMakeFiles/Install_Network_Service_Discovery.dir/depend:
-	cd /cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd /cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd /cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug /cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug /cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Install_Network_Service_Discovery.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Install_Network_Service_Discovery.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Install_Network_Service_Discovery.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd
+# Install script for directory: /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,62 +29,54 @@ endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd.exe")
+   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin" TYPE EXECUTABLE FILES "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/nsd.exe")
-  if(EXISTS "$ENV{DESTDIR}/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd.exe" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd.exe")
+file(INSTALL DESTINATION "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin" TYPE EXECUTABLE FILES "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/nsd")
+  if(EXISTS "$ENV{DESTDIR}/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip.exe" "$ENV{DESTDIR}/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd.exe")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/nsd")
     endif()
   endif()
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd_shared.dll.a")
+   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/libnsd.dylib")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static" TYPE STATIC_LIBRARY OPTIONAL FILES "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/libnsd_shared.dll.a")
-endif()
-
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/cygnsd_shared.dll")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin" TYPE SHARED_LIBRARY FILES "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/cygnsd_shared.dll")
-  if(EXISTS "$ENV{DESTDIR}/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/cygnsd_shared.dll" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/cygnsd_shared.dll")
+file(INSTALL DESTINATION "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib" TYPE SHARED_LIBRARY FILES "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/libnsd.dylib")
+  if(EXISTS "$ENV{DESTDIR}/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/libnsd.dylib" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/libnsd.dylib")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip.exe" "$ENV{DESTDIR}/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/bin/cygnsd_shared.dll")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/libnsd.dylib")
     endif()
   endif()
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd.a")
+   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static" TYPE STATIC_LIBRARY FILES "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/libnsd.a")
+file(INSTALL DESTINATION "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static" TYPE STATIC_LIBRARY FILES "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/libnsd.a")
+  if(EXISTS "$ENV{DESTDIR}/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd.a" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd.a")
+    execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" "$ENV{DESTDIR}/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/output/unix/lib/static/libnsd.a")
+  endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -95,5 +87,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

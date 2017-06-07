@@ -6,41 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Program Files/Bonjour SDK/Include/dns_sd.h
-sys/types.h
--
-sys/types.h
--
-Tiano.h
-/cygdrive/c/Program Files/Bonjour SDK/Include/Tiano.h
-windows.h
--
-stdint.h
--
-dispatch/dispatch.h
--
-
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.c
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.c
 event_loop.h
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
 dns_sd.h
 -
 CoreFoundation/CoreFoundation.h
 -
 
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
 dns_sd.h
 -
 
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.c
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.c
 network_service_discovery.h
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
 apple/event_loop.h
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
 unix/event_loop.h
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.h
 windows/event_loop.h
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.h
 errno.h
 -
 stdio.h
@@ -50,17 +36,17 @@ string.h
 pthread.h
 -
 
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
 dns_sd.h
 -
 ../../../../../../../Program Files/Bonjour SDK/Include/dns_sd.h
-/cygdrive/c/Program Files/Bonjour SDK/Include/dns_sd.h
+/Program Files/Bonjour SDK/Include/dns_sd.h
 dns_sd.h
 -
 
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.c
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.c
 event_loop.h
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.h
 sys/types.h
 -
 errno.h
@@ -70,17 +56,17 @@ stdio.h
 string.h
 -
 
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.h
 dns_sd.h
 -
 
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.c
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.c
 event_loop.h
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.h
 stdio.h
 -
 
-/cygdrive/c/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.h
 ../../../../../../../../Program Files/Bonjour SDK/Include/dns_sd.h
-/cygdrive/c/Program Files/Bonjour SDK/Include/dns_sd.h
+/Program Files/Bonjour SDK/Include/dns_sd.h
 

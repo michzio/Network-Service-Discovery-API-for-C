@@ -49,41 +49,70 @@ CFLAGS += $(INCL_DIRS)
 # the build target executable: 
 TARGET = nsd
 LIBRARY = libnsd.a
+SHARED_LIBRARY = libnsd.so
+
+# on macOS build .dylib shared library
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+	DYNAMIC_LIBRARY= libnsd.dylib
+else 
+	DYNAMIC_LIBRARY=
+endif
 
 # source files 
 SOURCE_FILES = network_service_discovery.o event_loop.o
 
-all: $(TARGET)
+# test source files 
+TEST_SOURCE_FILES = 
 
-$(TARGET): main.c $(LIBRARY) $(TEST_SOURCE_FILES)
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(TEST_SOURCE_FILES) $(LIBRARY) $(OS_X_LIBS) $(WINDOWS_LIBS) $(BONJOUR_LIBS)
+# output directories 
+OUTPUT_DIR = output/debug
+OUTPUT_LIB_DIR = $(OUTPUT_DIR)/lib
+OUTPUT_STATIC_LIB_DIR = $(OUTPUT_LIB_DIR)/static
+OUTPUT_BIN_DIR = $(OUTPUT_DIR)/bin
+OUTPUT_TEST_DIR = $(OUTPUT_DIR)/test
+
+all: directories libraries $(TARGET)
+
+# make output directories
+directories: 
+	@mkdir -p $(OUTPUT_DIR)
+	@mkdir -p $(OUTPUT_LIB_DIR)
+	@mkdir -p $(OUTPUT_STATIC_LIB_DIR)
+	@mkdir -p $(OUTPUT_BIN_DIR)
+	@mkdir -p $(OUTPUT_TEST_DIR)
+
+libraries: $(LIBRARY)
+
+$(TARGET): $(LIBRARY) $(TEST_SOURCE_FILES)
+	$(CC) $(CFLAGS) -o $(OUTPUT_BIN_DIR)/$(TARGET) main.c $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OS_X_LIBS) $(WINDOWS_LIBS) $(BONJOUR_LIBS)
 
 $(LIBRARY): $(SOURCE_FILES)
-	$(AR) $(LIBRARY) $(SOURCE_FILES)
+	$(AR) $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OUTPUT_DIR)/*.o
 
 network_service_discovery.o: network_service_discovery.c network_service_discovery.h
-	$(CC) $(CFLAGS) -c network_service_discovery.c
+	$(CC) $(CFLAGS) -c network_service_discovery.c -o $(OUTPUT_DIR)/network_service_discovery.o
 
 ifeq ($(OS), Windows_NT)
 # WINDOWS
 event_loop.o: windows/event_loop.c windows/event_loop.h
-	$(CC) $(CFLAGS) -c windows/event_loop.c
+	$(CC) $(CFLAGS) -c windows/event_loop.c -o $(OUTPUT_DIR)/event_loop.o
 else
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S), Darwin)
 # OS X
 event_loop.o: apple/event_loop.c apple/event_loop.h
-	$(CC) $(CFLAGS) -c apple/event_loop.c
+	$(CC) $(CFLAGS) -c apple/event_loop.c -o $(OUTPUT_DIR)/event_loop.o
 
 else
 # UNIX
 event_loop.o: unix/event_loop.c unix/event_loop.h
-	$(CC) $(CFLAGS) -c unix/event_loop.c
+	$(CC) $(CFLAGS) -c unix/event_loop.c -o $(OUTPUT_DIR)/event_loop.o
 
 endif
 endif
 
 clean: 
-	$(RM) $(TARGET) $(TARGET).exe $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)
+	$(RM) -rf $(OUTPUT_DIR)
  

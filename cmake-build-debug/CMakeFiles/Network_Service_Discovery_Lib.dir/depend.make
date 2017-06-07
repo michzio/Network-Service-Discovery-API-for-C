@@ -4,7 +4,6 @@
 CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.o: ../apple/event_loop.c
 CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.o: ../apple/event_loop.h
 
-CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o: /cygdrive/c/Program\ Files/Bonjour\ SDK/Include/dns_sd.h
 CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o: ../apple/event_loop.h
 CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o: ../network_service_discovery.c
 CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o: ../network_service_discovery.h
@@ -14,7 +13,6 @@ CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o: ../w
 CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.o: ../unix/event_loop.c
 CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.o: ../unix/event_loop.h
 
-CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.o: /cygdrive/c/Program\ Files/Bonjour\ SDK/Include/dns_sd.h
 CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.o: ../windows/event_loop.c
 CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.o: ../windows/event_loop.h
 
