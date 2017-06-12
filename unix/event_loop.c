@@ -13,8 +13,12 @@
 #define LONG_TIME 100000000
 static volatile int time_out = LONG_TIME;
 
+void nsd_handle_events(nsd_context_t *nsd_context) {
 
-void nsd_handle_events(DNSServiceRef serviceRef) {
+    DNSServiceRef serviceRef = (DNSServiceRef) nsd_context->context;
+    nsd_state_t *nsd_state = malloc(sizeof(nsd_state_t));
+    nsd_state->serviceRef = serviceRef;
+    nsd_context->context = nsd_state;
 
     // get file descriptor of DNS service for the Unix Domain Socket
     // used to communicate with the mdnsd deamon running in the background
@@ -22,6 +26,8 @@ void nsd_handle_events(DNSServiceRef serviceRef) {
     int nfds = dns_sd_fd + 1;
     fd_set read_fds;
     struct timeval tv;
+
+    nsd_state->dns_sd_fd = dns_sd_fd;
 
     while(1) {
 

@@ -17,6 +17,10 @@ CoreFoundation/CoreFoundation.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
 dns_sd.h
 -
+CoreFoundation/CoreFoundation.h
+-
+../network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
 
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.c
 network_service_discovery.h
@@ -34,6 +38,8 @@ stdio.h
 string.h
 -
 pthread.h
+-
+stdlib.h
 -
 
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
@@ -59,6 +65,8 @@ string.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.h
 dns_sd.h
 -
+../network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
 
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.c
 event_loop.h
@@ -69,4 +77,6 @@ stdio.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.h
 ../../../../../../../../Program Files/Bonjour SDK/Include/dns_sd.h
 /Program Files/Bonjour SDK/Include/dns_sd.h
+../network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
 

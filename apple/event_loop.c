@@ -9,16 +9,8 @@
 #include <dns_sd.h>
 #include <CoreFoundation/CoreFoundation.h>
 
-// CFRunLoop-related state
-struct nsd_state {
-    DNSServiceRef serviceRef;
-    CFSocketRef cfSocketRef;
-    CFRunLoopSourceRef sourceRef;
-};
-typedef struct nsd_state nsd_state_t;
-
 // remove Network Service Discovery from CFRunLoop's event sources
-static void nsd_remove_event_source(CFRunLoopRef runLoopRef, nsd_state_t *nsd_state) {
+void nsd_remove_event_source(CFRunLoopRef runLoopRef, nsd_state_t *nsd_state) {
 
     if(runLoopRef == NULL) {
         fprintf(stderr, "nsd_remove_event_source: failed! CFRunLoopRef is NULL.\n");
@@ -60,13 +52,13 @@ static void cfSocketCallBack(CFSocketRef cfSockerRef, CFSocketCallBackType type,
     }
 
     if( (err = DNSServiceProcessResult(nsd_state->serviceRef) ) != kDNSServiceErr_NoError) {
-        fprintf(stderr, "DNSServiceProcessResult: failed! error: %d \n", err);
+        fprintf(stderr, "DNSServiceProcessResult: failed! error: %d\n", err);
         nsd_remove_event_source(CFRunLoopGetCurrent(), nsd_state);
     }
 }
 
 // add Network Service Discovery to CFRunLoop's event sources
-static void nsd_add_event_source(CFRunLoopRef runLoopRef, nsd_state_t *nsd_state) {
+void nsd_add_event_source(CFRunLoopRef runLoopRef, nsd_state_t *nsd_state) {
 
     CFSocketContext context = { 0, (void *) nsd_state, NULL, NULL, NULL };
     CFSocketNativeHandle socket;
@@ -87,15 +79,19 @@ static void nsd_add_event_source(CFRunLoopRef runLoopRef, nsd_state_t *nsd_state
 
     // add the CFRunLoopSource to the current run loop.
     CFRunLoopAddSource(runLoopRef, nsd_state->sourceRef, kCFRunLoopCommonModes);
+
+    nsd_state->runLoopRef = runLoopRef;
 }
 
-void nsd_handle_events(DNSServiceRef serviceRef) {
+void nsd_handle_events(nsd_context_t *nsd_context) {
 
     // printf("Apple");
     // fflush(stdout);
 
+    DNSServiceRef serviceRef = (DNSServiceRef) nsd_context->context;
     nsd_state_t *nsd_state = malloc(sizeof(nsd_state_t));
     nsd_state->serviceRef = serviceRef;
+    nsd_context->context = nsd_state;
 
     nsd_add_event_source(CFRunLoopGetCurrent(), nsd_state);
 

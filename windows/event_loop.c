@@ -13,13 +13,18 @@ static DNSServiceRef  gServiceRef = NULL;
 
 static LRESULT CALLBACK WndProc(HWND inWindow, UINT inMsg, WPARAM inWParam, LPARAM inLParam);
 
-void nsd_handle_events(DNSServiceRef serviceRef) {
+void nsd_handle_events(nsd_context_t nsd_context) {
 
     HINSTANCE instance;
     WNDCLASSEX wcex;
     HWND  window;
     MSG messege;
     int error;
+
+    DNSServiceRef serviceRef = (DNSServiceRef) nsd_context->context;
+    nsd_state_t *nsd_state = malloc(sizeof(nsd_state_t));
+    nsd_state->serviceRef = serviceRef;
+    nsd_context->context = nsd_state;
 
     gServiceRef = serviceRef;
 

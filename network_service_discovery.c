@@ -22,12 +22,9 @@
 
 #ifndef _WIN32
     #include <pthread.h>
-#endif
+#include <stdlib.h>
 
-struct nsd_register_callback_wrapper {
-    nsd_register_callback_t callback;
-};
-typedef struct nsd_register_callback_wrapper nsd_register_callback_wrapper_t;
+#endif
 
 static void nsd_register_main_callback(DNSServiceRef serviceRef,
                                        DNSServiceFlags flags,
@@ -40,8 +37,10 @@ static void nsd_register_main_callback(DNSServiceRef serviceRef,
     if(errorCode == kDNSServiceErr_NoError) {
         printf("nsd service registered!\n");
 
-        if(context)
-            ((nsd_register_callback_wrapper_t *)context)->callback(name,regtype,domain, 0);
+        if(context) {
+            nsd_context_t *nsd_context = ((nsd_context_t *) context);
+            nsd_context->callback.register_callback(name, regtype, domain, 0, nsd_context->context);
+        }
 
     } else {
         fprintf(stderr, "nsd_register_main_callback: failed! error: %d\n", errorCode);
@@ -100,7 +99,9 @@ void nsd_register(const char *name, const char *regtype, const char *domain,
 
     DNSServiceRef serviceRef;
 
-    nsd_register_callback_wrapper_t callback_wrapper = { .callback = callback };
+    nsd_context_t *nsd_context = malloc(sizeof(nsd_context_t));
+    nsd_context->callback_type = REGISTER_CALLBACK;
+    nsd_context->callback.register_callback = callback;
 
     if(DNSServiceRegister(&serviceRef,
                           0, // flags - optional settings
@@ -113,9 +114,11 @@ void nsd_register(const char *name, const char *regtype, const char *domain,
                           0, // txtLen
                           NULL, // txtRecord (NULL)
                           nsd_register_main_callback,
-                          &callback_wrapper
+                          &nsd_context
                          ) == kDNSServiceErr_NoError) {
-        nsd_handle_events(serviceRef);
+
+        nsd_context->context = serviceRef;
+        nsd_handle_events(nsd_context);
         nsd_free(serviceRef);
     }
 }
@@ -157,11 +160,6 @@ int nsd_spawn_register(const char *name, const char *regtype, const char *domain
 }
 #endif
 
-struct nsd_browse_callback_wrapper {
-    nsd_browse_callback_t callback;
-};
-typedef struct nsd_browse_callback_wrapper nsd_browse_callback_wrapper_t;
-
 static void nsd_browse_main_callback(DNSServiceRef serviceRef,
                                 DNSServiceFlags flags,
                                 uint32_t interfaceIndex,
@@ -177,8 +175,10 @@ static void nsd_browse_main_callback(DNSServiceRef serviceRef,
         nsd_flags_t nsd_flags = (flags & kDNSServiceFlagsAdd) ? ADDED : REMOVED;
         nsd_flags |= (flags & kDNSServiceFlagsMoreComing) ? MORE : 0;
 
-        if(context)
-            ((nsd_browse_callback_wrapper_t *)context)->callback(interfaceIndex, serviceName, regtype, replyDomain, nsd_flags);
+        if(context) {
+            nsd_context_t *nsd_context = ((nsd_context_t *) context);
+            nsd_context->callback.browse_callback(interfaceIndex, serviceName, regtype, replyDomain, nsd_flags, nsd_context->context);
+        }
     } else {
         fprintf(stderr, "nsd_browse_main_callback: failed! error: %d\n", errorCode);
     }
@@ -188,7 +188,9 @@ void nsd_browse(const char *regtype, const char *domain, nsd_browse_callback_t c
 
     DNSServiceRef serviceRef;
 
-    nsd_browse_callback_wrapper_t callback_wrapper = { .callback = callback };
+    nsd_context_t *nsd_context = malloc(sizeof(nsd_context_t));
+    nsd_context->callback_type = BROWSE_CALLBACK;
+    nsd_context->callback.browse_callback = callback;
 
     if(DNSServiceBrowse(&serviceRef,
                      0, // flags - optional settings
@@ -196,10 +198,11 @@ void nsd_browse(const char *regtype, const char *domain, nsd_browse_callback_t c
                      regtype, // service type like "_remotely_click._tcp", more at  http://www.dns-sd.org/ServiceTypes.html
                      domain,  // ex. "local", or can be NULL
                      nsd_browse_main_callback,  // function called asynchronouslly when some network service will be disovered
-                     &callback_wrapper // can pass any param of typy void * to callback function
+                     &nsd_context // can pass any param of typy void * to callback function
                     ) == kDNSServiceErr_NoError) {
 
-            nsd_handle_events(serviceRef);
+            nsd_context->context = serviceRef;
+            nsd_handle_events(nsd_context);
             nsd_free(serviceRef);
     } else {
         fprintf(stderr, "DNSServiceBrowse: failed!\n");
@@ -246,11 +249,6 @@ int nsd_spawn_browse(const char *regtype, const char *domain, nsd_browse_callbac
 }
 #endif
 
-struct nsd_resolve_callback_wrapper {
-    nsd_resolve_callback_t callback;
-};
-typedef struct nsd_resolve_callback_wrapper nsd_resolve_callback_wrapper_t;
-
 static void nsd_resolve_main_callback(DNSServiceRef serviceRef,
                                       DNSServiceFlags flags,
                                       uint32_t interfaceIndex,
@@ -267,8 +265,10 @@ static void nsd_resolve_main_callback(DNSServiceRef serviceRef,
 
         nsd_flags_t nsd_flags = (flags & kDNSServiceFlagsMoreComing) ? MORE : 0;
 
-        if(context)
-            ((nsd_resolve_callback_wrapper_t *)context)->callback(interfaceIndex, fullname, hosttarget, port, nsd_flags);
+        if(context) {
+            nsd_context_t *nsd_context = ((nsd_context_t *) context);
+            nsd_context->callback.resolve_callback(interfaceIndex, fullname, hosttarget, port, nsd_flags, nsd_context->context);
+        }
 
         // IMPORTANT! nsd_free(serviceRef); // to enable later service discovery and do not block thread with handle resolve events loop
     } else {
@@ -281,7 +281,9 @@ void nsd_resolve(const char *name, const char *regtype, const char *domain,
 
     DNSServiceRef serviceRef;
 
-    nsd_resolve_callback_wrapper_t callback_wrapper = { .callback = callback };
+    nsd_context_t *nsd_context = malloc(sizeof(nsd_context_t));
+    nsd_context->callback_type = RESOLVE_CALLBACK;
+    nsd_context->callback.resolve_callback = callback;
 
     if(DNSServiceResolve(&serviceRef,
                          0, // flags - optional settings
@@ -290,10 +292,11 @@ void nsd_resolve(const char *name, const char *regtype, const char *domain,
                          regtype, // as discovered in browse
                          domain, // as discovered in browse
                          nsd_resolve_main_callback, // function called asynchronouslly when network service will be resolved
-                         &callback_wrapper // can pass any param of typy void * to callback function
+                         &nsd_context // can pass any param of typy void * to callback function
                         ) == kDNSServiceErr_NoError) {
 
-        nsd_handle_events(serviceRef);
+        nsd_context->context = serviceRef;
+        nsd_handle_events(nsd_context);
         nsd_free(serviceRef);
     } else {
         fprintf(stderr, "DNSServiceResolve: failed!\n");

@@ -17,10 +17,24 @@
 #include <dns_sd.h>
 #endif // __unix__
 
+
 typedef enum {ADDED = 1, REMOVED = 2, MORE = 4} nsd_flags_t;
-typedef void (*nsd_register_callback_t)(const char *name, const char *regtype, const char *domain, nsd_flags_t flags);
-typedef void (*nsd_browse_callback_t)(uint32_t interface_idx, const char *service_name, const char *regtype, const char *domain, nsd_flags_t flags);
-typedef void (*nsd_resolve_callback_t)(uint32_t interface_idx, const char *fullname, const char *hosttarget, uint16_t port, nsd_flags_t flags);
+typedef enum { REGISTER_CALLBACK, BROWSE_CALLBACK, RESOLVE_CALLBACK } callback_type_t;
+
+typedef void (*nsd_register_callback_t)(const char *name, const char *regtype, const char *domain, nsd_flags_t flags, void *context);
+typedef void (*nsd_browse_callback_t)(uint32_t interface_idx, const char *service_name, const char *regtype, const char *domain, nsd_flags_t flags, void *context);
+typedef void (*nsd_resolve_callback_t)(uint32_t interface_idx, const char *fullname, const char *hosttarget, uint16_t port, nsd_flags_t flags, void *context);
+
+struct nsd_context {
+    void *context;
+    callback_type_t callback_type;
+    union {
+        nsd_register_callback_t register_callback;
+        nsd_browse_callback_t browse_callback;
+        nsd_resolve_callback_t resolve_callback;
+    } callback;
+};
+typedef struct nsd_context nsd_context_t;
 
 void nsd_simple_register(const char *regtype, uint16_t port, nsd_register_callback_t callback);
 int nsd_spawn_simple_register(const char *regtype, uint16_t port, nsd_register_callback_t callback);
