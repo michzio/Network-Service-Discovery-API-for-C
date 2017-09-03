@@ -22,8 +22,8 @@ void nsd_remove_event_source(CFRunLoopRef runLoopRef, nsd_state_t *nsd_state) {
     }
 
     // remove CFRunLoopSource from the current run loop.
-    CFRunLoopRemoveSource(runLoopRef, nsd_state->sourceRef, kCFRunLoopCommonModes);
-    CFRelease(nsd_state->sourceRef);
+    //CFRunLoopRemoveSource(runLoopRef, nsd_state->sourceRef, kCFRunLoopCommonModes);
+    //CFRelease(nsd_state->sourceRef);
 
     // invalidate the CFSocket
     CFSocketInvalidate(nsd_state->cfSocketRef);

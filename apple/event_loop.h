@@ -11,7 +11,7 @@
 
 #include <dns_sd.h>
 #include <CoreFoundation/CoreFoundation.h>
-#include "../network_service_discovery.h"
+#include "../include/network_service_discovery.h"
 
 // CFRunLoop-related state
 struct nsd_state {

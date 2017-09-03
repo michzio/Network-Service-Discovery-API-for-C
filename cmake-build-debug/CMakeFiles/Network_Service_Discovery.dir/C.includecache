@@ -11,24 +11,24 @@ dns_sd.h
 -
 CoreFoundation/CoreFoundation.h
 -
-../network_service_discovery.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
+../include/network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/include/network_service_discovery.h
 
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/main.c
-stdio.h
--
-network_service_discovery.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
-apple/event_loop.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
-arpa/inet.h
--
-
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/include/network_service_discovery.h
 dns_sd.h
 -
 ../../../../../../../Program Files/Bonjour SDK/Include/dns_sd.h
-/Program Files/Bonjour SDK/Include/dns_sd.h
+/Users/Program Files/Bonjour SDK/Include/dns_sd.h
 dns_sd.h
+-
+
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/main.c
+stdio.h
+-
+../include/network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/include/network_service_discovery.h
+../apple/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
+arpa/inet.h
 -
 

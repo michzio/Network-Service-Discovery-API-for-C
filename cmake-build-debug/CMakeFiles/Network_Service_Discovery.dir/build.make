@@ -57,50 +57,50 @@ include CMakeFiles/Network_Service_Discovery.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Network_Service_Discovery.dir/flags.make
 
-CMakeFiles/Network_Service_Discovery.dir/main.c.o: CMakeFiles/Network_Service_Discovery.dir/flags.make
-CMakeFiles/Network_Service_Discovery.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Network_Service_Discovery.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Network_Service_Discovery.dir/main.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/main.c
+CMakeFiles/Network_Service_Discovery.dir/src/main.c.o: CMakeFiles/Network_Service_Discovery.dir/flags.make
+CMakeFiles/Network_Service_Discovery.dir/src/main.c.o: ../src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Network_Service_Discovery.dir/src/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Network_Service_Discovery.dir/src/main.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/main.c
 
-CMakeFiles/Network_Service_Discovery.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Network_Service_Discovery.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/main.c > CMakeFiles/Network_Service_Discovery.dir/main.c.i
+CMakeFiles/Network_Service_Discovery.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Network_Service_Discovery.dir/src/main.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/main.c > CMakeFiles/Network_Service_Discovery.dir/src/main.c.i
 
-CMakeFiles/Network_Service_Discovery.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Network_Service_Discovery.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/main.c -o CMakeFiles/Network_Service_Discovery.dir/main.c.s
+CMakeFiles/Network_Service_Discovery.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Network_Service_Discovery.dir/src/main.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/main.c -o CMakeFiles/Network_Service_Discovery.dir/src/main.c.s
 
-CMakeFiles/Network_Service_Discovery.dir/main.c.o.requires:
+CMakeFiles/Network_Service_Discovery.dir/src/main.c.o.requires:
 
-.PHONY : CMakeFiles/Network_Service_Discovery.dir/main.c.o.requires
+.PHONY : CMakeFiles/Network_Service_Discovery.dir/src/main.c.o.requires
 
-CMakeFiles/Network_Service_Discovery.dir/main.c.o.provides: CMakeFiles/Network_Service_Discovery.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery.dir/build.make CMakeFiles/Network_Service_Discovery.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/Network_Service_Discovery.dir/main.c.o.provides
+CMakeFiles/Network_Service_Discovery.dir/src/main.c.o.provides: CMakeFiles/Network_Service_Discovery.dir/src/main.c.o.requires
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery.dir/build.make CMakeFiles/Network_Service_Discovery.dir/src/main.c.o.provides.build
+.PHONY : CMakeFiles/Network_Service_Discovery.dir/src/main.c.o.provides
 
-CMakeFiles/Network_Service_Discovery.dir/main.c.o.provides.build: CMakeFiles/Network_Service_Discovery.dir/main.c.o
+CMakeFiles/Network_Service_Discovery.dir/src/main.c.o.provides.build: CMakeFiles/Network_Service_Discovery.dir/src/main.c.o
 
 
 # Object files for target Network_Service_Discovery
 Network_Service_Discovery_OBJECTS = \
-"CMakeFiles/Network_Service_Discovery.dir/main.c.o"
+"CMakeFiles/Network_Service_Discovery.dir/src/main.c.o"
 
 # External object files for target Network_Service_Discovery
 Network_Service_Discovery_EXTERNAL_OBJECTS =
 
-nsd: CMakeFiles/Network_Service_Discovery.dir/main.c.o
-nsd: CMakeFiles/Network_Service_Discovery.dir/build.make
-nsd: libnsd.a
-nsd: CMakeFiles/Network_Service_Discovery.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable nsd"
+../outputs/bin/apple/nsd: CMakeFiles/Network_Service_Discovery.dir/src/main.c.o
+../outputs/bin/apple/nsd: CMakeFiles/Network_Service_Discovery.dir/build.make
+../outputs/bin/apple/nsd: ../outputs/lib/apple/libnsd.dylib
+../outputs/bin/apple/nsd: CMakeFiles/Network_Service_Discovery.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ../outputs/bin/apple/nsd"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Network_Service_Discovery.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Network_Service_Discovery.dir/build: nsd
+CMakeFiles/Network_Service_Discovery.dir/build: ../outputs/bin/apple/nsd
 
 .PHONY : CMakeFiles/Network_Service_Discovery.dir/build
 
-CMakeFiles/Network_Service_Discovery.dir/requires: CMakeFiles/Network_Service_Discovery.dir/main.c.o.requires
+CMakeFiles/Network_Service_Discovery.dir/requires: CMakeFiles/Network_Service_Discovery.dir/src/main.c.o.requires
 
 .PHONY : CMakeFiles/Network_Service_Discovery.dir/requires
 

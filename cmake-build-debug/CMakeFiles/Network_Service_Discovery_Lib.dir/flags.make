@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = -DNetwork_Service_Discovery_Lib_EXPORTS
 
-C_INCLUDES = 
+C_INCLUDES = -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/include 
 

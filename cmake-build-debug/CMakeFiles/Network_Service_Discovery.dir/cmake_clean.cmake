@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Network_Service_Discovery.dir/main.c.o"
-  "nsd.pdb"
-  "nsd"
+  "CMakeFiles/Network_Service_Discovery.dir/src/main.c.o"
+  "../outputs/bin/apple/nsd.pdb"
+  "../outputs/bin/apple/nsd"
 )
 
 # Per-language clean rules from dependency scanning.

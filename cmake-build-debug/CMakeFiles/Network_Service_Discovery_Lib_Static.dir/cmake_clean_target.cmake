@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libnsd.a"
+  "../outputs/lib/apple/libnsd.a"
 )

@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/apple/event_loop.c.o"
-  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/network_service_discovery.c.o"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/network_service_discovery.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/src/network_service_discovery.c.o"
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/unix/event_loop.c.o"
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles/Network_Service_Discovery_Lib_Static.dir/windows/event_loop.c.o"
   )
@@ -13,6 +13,7 @@ set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../include"
   )
 
 # Targets to which this target links.

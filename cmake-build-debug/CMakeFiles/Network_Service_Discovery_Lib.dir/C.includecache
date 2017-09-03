@@ -19,18 +19,26 @@ dns_sd.h
 -
 CoreFoundation/CoreFoundation.h
 -
-../network_service_discovery.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
+../include/network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/include/network_service_discovery.h
 
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.c
-network_service_discovery.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
-apple/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/include/network_service_discovery.h
+dns_sd.h
+-
+../../../../../../../Program Files/Bonjour SDK/Include/dns_sd.h
+/Users/Program Files/Bonjour SDK/Include/dns_sd.h
+dns_sd.h
+-
+
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/network_service_discovery.c
+../include/network_service_discovery.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/include/network_service_discovery.h
+../apple/event_loop.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/apple/event_loop.h
 unix/event_loop.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/unix/event_loop.h
 windows/event_loop.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/windows/event_loop.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/windows/event_loop.h
 errno.h
 -
 stdio.h
@@ -40,14 +48,6 @@ string.h
 pthread.h
 -
 stdlib.h
--
-
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.h
-dns_sd.h
--
-../../../../../../../Program Files/Bonjour SDK/Include/dns_sd.h
-/Program Files/Bonjour SDK/Include/dns_sd.h
-dns_sd.h
 -
 
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/unix/event_loop.c

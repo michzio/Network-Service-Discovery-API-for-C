@@ -2,10 +2,10 @@
 // Created by Michal Ziobro on 22/05/2017.
 //
 
-#include "network_service_discovery.h"
+#include "../include/network_service_discovery.h"
 
 #ifdef __APPLE__
-    #include "apple/event_loop.h"
+    #include "../apple/event_loop.h"
 #endif
 
 #ifdef __unix__

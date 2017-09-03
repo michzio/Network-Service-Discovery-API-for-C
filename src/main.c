@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "network_service_discovery.h"
-#include "apple/event_loop.h"
+#include "../include/network_service_discovery.h"
+#include "../apple/event_loop.h"
 
 #ifndef _WIN32
     #include <arpa/inet.h>

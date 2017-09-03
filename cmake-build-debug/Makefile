@@ -56,29 +56,6 @@ CMAKE_BINARY_DIR = /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmak
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -100,27 +77,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -181,19 +137,6 @@ Network_Service_Discovery_Lib_Static/fast:
 .PHONY : Network_Service_Discovery_Lib_Static/fast
 
 #=============================================================================
-# Target rules for targets named Install_Network_Service_Discovery
-
-# Build rule for target.
-Install_Network_Service_Discovery: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Install_Network_Service_Discovery
-.PHONY : Install_Network_Service_Discovery
-
-# fast build rule for target.
-Install_Network_Service_Discovery/fast:
-	$(MAKE) -f CMakeFiles/Install_Network_Service_Discovery.dir/build.make CMakeFiles/Install_Network_Service_Discovery.dir/build
-.PHONY : Install_Network_Service_Discovery/fast
-
-#=============================================================================
 # Target rules for targets named Network_Service_Discovery_Lib
 
 # Build rule for target.
@@ -236,62 +179,62 @@ apple/event_loop.c.s:
 	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.s
 .PHONY : apple/event_loop.c.s
 
-main.o: main.c.o
+src/main.o: src/main.c.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery.dir/build.make CMakeFiles/Network_Service_Discovery.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery.dir/build.make CMakeFiles/Network_Service_Discovery.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery.dir/build.make CMakeFiles/Network_Service_Discovery.dir/main.c.s
-.PHONY : main.c.s
-
-network_service_discovery.o: network_service_discovery.c.o
-
-.PHONY : network_service_discovery.o
+.PHONY : src/main.o
 
 # target to build an object file
-network_service_discovery.c.o:
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/network_service_discovery.c.o
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o
-.PHONY : network_service_discovery.c.o
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery.dir/build.make CMakeFiles/Network_Service_Discovery.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-network_service_discovery.i: network_service_discovery.c.i
+src/main.i: src/main.c.i
 
-.PHONY : network_service_discovery.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-network_service_discovery.c.i:
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/network_service_discovery.c.i
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.i
-.PHONY : network_service_discovery.c.i
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery.dir/build.make CMakeFiles/Network_Service_Discovery.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-network_service_discovery.s: network_service_discovery.c.s
+src/main.s: src/main.c.s
 
-.PHONY : network_service_discovery.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-network_service_discovery.c.s:
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/network_service_discovery.c.s
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.s
-.PHONY : network_service_discovery.c.s
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery.dir/build.make CMakeFiles/Network_Service_Discovery.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/network_service_discovery.o: src/network_service_discovery.c.o
+
+.PHONY : src/network_service_discovery.o
+
+# target to build an object file
+src/network_service_discovery.c.o:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/src/network_service_discovery.c.o
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o
+.PHONY : src/network_service_discovery.c.o
+
+src/network_service_discovery.i: src/network_service_discovery.c.i
+
+.PHONY : src/network_service_discovery.i
+
+# target to preprocess a source file
+src/network_service_discovery.c.i:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/src/network_service_discovery.c.i
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.i
+.PHONY : src/network_service_discovery.c.i
+
+src/network_service_discovery.s: src/network_service_discovery.c.s
+
+.PHONY : src/network_service_discovery.s
+
+# target to generate assembly for a file
+src/network_service_discovery.c.s:
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib_Static.dir/build.make CMakeFiles/Network_Service_Discovery_Lib_Static.dir/src/network_service_discovery.c.s
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.s
+.PHONY : src/network_service_discovery.c.s
 
 unix/event_loop.o: unix/event_loop.c.o
 
@@ -359,25 +302,20 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... list_install_components"
 	@echo "... Network_Service_Discovery"
-	@echo "... install/local"
 	@echo "... Network_Service_Discovery_Lib_Static"
-	@echo "... Install_Network_Service_Discovery"
 	@echo "... Network_Service_Discovery_Lib"
 	@echo "... apple/event_loop.o"
 	@echo "... apple/event_loop.i"
 	@echo "... apple/event_loop.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... network_service_discovery.o"
-	@echo "... network_service_discovery.i"
-	@echo "... network_service_discovery.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/network_service_discovery.o"
+	@echo "... src/network_service_discovery.i"
+	@echo "... src/network_service_discovery.s"
 	@echo "... unix/event_loop.o"
 	@echo "... unix/event_loop.i"
 	@echo "... unix/event_loop.s"

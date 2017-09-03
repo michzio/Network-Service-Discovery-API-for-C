@@ -57,28 +57,28 @@ include CMakeFiles/Network_Service_Discovery_Lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Network_Service_Discovery_Lib.dir/flags.make
 
-CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o: CMakeFiles/Network_Service_Discovery_Lib.dir/flags.make
-CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o: ../network_service_discovery.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.c
+CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o: CMakeFiles/Network_Service_Discovery_Lib.dir/flags.make
+CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o: ../src/network_service_discovery.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/network_service_discovery.c
 
-CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.c > CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.i
+CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/network_service_discovery.c > CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.i
 
-CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/network_service_discovery.c -o CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.s
+CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/src/network_service_discovery.c -o CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.s
 
-CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o.requires:
+CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o.requires:
 
-.PHONY : CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o.requires
+.PHONY : CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o.requires
 
-CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o.provides: CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o.requires
-	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o.provides.build
-.PHONY : CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o.provides
+CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o.provides: CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o.requires
+	$(MAKE) -f CMakeFiles/Network_Service_Discovery_Lib.dir/build.make CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o.provides.build
+.PHONY : CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o.provides
 
-CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o.provides.build: CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o
+CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o.provides.build: CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o
 
 
 CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.o: CMakeFiles/Network_Service_Discovery_Lib.dir/flags.make
@@ -155,7 +155,7 @@ CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.o.provides.bui
 
 # Object files for target Network_Service_Discovery_Lib
 Network_Service_Discovery_Lib_OBJECTS = \
-"CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o" \
+"CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o" \
 "CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.o" \
 "CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.o" \
 "CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.o"
@@ -163,21 +163,21 @@ Network_Service_Discovery_Lib_OBJECTS = \
 # External object files for target Network_Service_Discovery_Lib
 Network_Service_Discovery_Lib_EXTERNAL_OBJECTS =
 
-libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o
-libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.o
-libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.o
-libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.o
-libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/build.make
-libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libnsd.dylib"
+../outputs/lib/apple/libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o
+../outputs/lib/apple/libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.o
+../outputs/lib/apple/libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.o
+../outputs/lib/apple/libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.o
+../outputs/lib/apple/libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/build.make
+../outputs/lib/apple/libnsd.dylib: CMakeFiles/Network_Service_Discovery_Lib.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/nsd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library ../outputs/lib/apple/libnsd.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Network_Service_Discovery_Lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Network_Service_Discovery_Lib.dir/build: libnsd.dylib
+CMakeFiles/Network_Service_Discovery_Lib.dir/build: ../outputs/lib/apple/libnsd.dylib
 
 .PHONY : CMakeFiles/Network_Service_Discovery_Lib.dir/build
 
-CMakeFiles/Network_Service_Discovery_Lib.dir/requires: CMakeFiles/Network_Service_Discovery_Lib.dir/network_service_discovery.c.o.requires
+CMakeFiles/Network_Service_Discovery_Lib.dir/requires: CMakeFiles/Network_Service_Discovery_Lib.dir/src/network_service_discovery.c.o.requires
 CMakeFiles/Network_Service_Discovery_Lib.dir/requires: CMakeFiles/Network_Service_Discovery_Lib.dir/unix/event_loop.c.o.requires
 CMakeFiles/Network_Service_Discovery_Lib.dir/requires: CMakeFiles/Network_Service_Discovery_Lib.dir/apple/event_loop.c.o.requires
 CMakeFiles/Network_Service_Discovery_Lib.dir/requires: CMakeFiles/Network_Service_Discovery_Lib.dir/windows/event_loop.c.o.requires

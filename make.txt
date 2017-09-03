@@ -6,7 +6,6 @@ ifeq ($(OS), Windows_NT)
     CC = C:/mingw-w64/x86_64-6.2.0-win32-sjlj-rt_v5-rev1/mingw64/bin/gcc.exe
 endif
 
-
 # the static library archiver
 AR = ar rcs
 
@@ -65,54 +64,58 @@ SOURCE_FILES = network_service_discovery.o event_loop.o
 # test source files 
 TEST_SOURCE_FILES = 
 
-# output directories 
-OUTPUT_DIR = output/debug
-OUTPUT_LIB_DIR = $(OUTPUT_DIR)/lib
-OUTPUT_STATIC_LIB_DIR = $(OUTPUT_LIB_DIR)/static
-OUTPUT_BIN_DIR = $(OUTPUT_DIR)/bin
-OUTPUT_TEST_DIR = $(OUTPUT_DIR)/test
+# outputs directories
+OUTPUTS_DIR = outputs/debug
+OUTPUTS_LIB_DIR = $(OUTPUTS_DIR)/lib
+OUTPUTS_BIN_DIR = $(OUTPUTS_DIR)/bin
+OUTPUTS_TEST_DIR = $(OUTPUTS_DIR)/test
 
 all: directories libraries $(TARGET)
 
 # make output directories
 directories: 
-	@mkdir -p $(OUTPUT_DIR)
-	@mkdir -p $(OUTPUT_LIB_DIR)
-	@mkdir -p $(OUTPUT_STATIC_LIB_DIR)
-	@mkdir -p $(OUTPUT_BIN_DIR)
-	@mkdir -p $(OUTPUT_TEST_DIR)
+	@mkdir -p $(OUTPUTS_DIR)
+	@mkdir -p $(OUTPUTS_LIB_DIR)
+	@mkdir -p $(OUTPUTS_BIN_DIR)
+	@mkdir -p $(OUTPUTS_TEST_DIR)
 
-libraries: $(LIBRARY)
+libraries: $(LIBRARY) $(SHARED_LIBRARY) $(DYNAMIC_LIBRARY)
 
 $(TARGET): $(LIBRARY) $(TEST_SOURCE_FILES)
-	$(CC) $(CFLAGS) -o $(OUTPUT_BIN_DIR)/$(TARGET) main.c $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OS_X_LIBS) $(WINDOWS_LIBS) $(BONJOUR_LIBS)
+	$(CC) $(CFLAGS) -o $(OUTPUTS_BIN_DIR)/$(TARGET) src/main.c $(OUTPUTS_LIB_DIR)/$(LIBRARY) $(OS_X_LIBS) $(WINDOWS_LIBS) $(BONJOUR_LIBS)
+
+$(SHARED_LIBRARY): $(SOURCE_FILES)
+	$(CC) $(CFLAGS) $(OS_X_LIBS) $(WINDOWS_LIBS) $(BONJOUR_LIBS) -shared -o $(OUTPUTS_LIB_DIR)/$(SHARED_LIBRARY) $(OUTPUTS_DIR)/*.o
+
+$(DYNAMIC_LIBRARY): $(SOURCE_FILES)
+	$(CC) $(CFLAGS) $(OS_X_LIBS) $(WINDOWS_LIBS) $(BONJOUR_LIBS) -dynamiclib -o $(OUTPUTS_LIB_DIR)/$(DYNAMIC_LIBRARY) $(OUTPUTS_DIR)/*.o
 
 $(LIBRARY): $(SOURCE_FILES)
-	$(AR) $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OUTPUT_DIR)/*.o
+	$(AR) $(OUTPUTS_LIB_DIR)/$(LIBRARY) $(OUTPUTS_DIR)/*.o
 
-network_service_discovery.o: network_service_discovery.c network_service_discovery.h
-	$(CC) $(CFLAGS) -c network_service_discovery.c -o $(OUTPUT_DIR)/network_service_discovery.o
+network_service_discovery.o: src/network_service_discovery.c include/network_service_discovery.h
+	$(CC) $(CFLAGS) -c src/network_service_discovery.c -o $(OUTPUTS_DIR)/network_service_discovery.o
 
 ifeq ($(OS), Windows_NT)
 # WINDOWS
 event_loop.o: windows/event_loop.c windows/event_loop.h
-	$(CC) $(CFLAGS) -c windows/event_loop.c -o $(OUTPUT_DIR)/event_loop.o
+	$(CC) $(CFLAGS) -c windows/event_loop.c -o $(OUTPUTS_DIR)/event_loop.o
 else
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S), Darwin)
 # OS X
 event_loop.o: apple/event_loop.c apple/event_loop.h
-	$(CC) $(CFLAGS) -c apple/event_loop.c -o $(OUTPUT_DIR)/event_loop.o
+	$(CC) $(CFLAGS) -c apple/event_loop.c -o $(OUTPUTS_DIR)/event_loop.o
 
 else
 # UNIX
 event_loop.o: unix/event_loop.c unix/event_loop.h
-	$(CC) $(CFLAGS) -c unix/event_loop.c -o $(OUTPUT_DIR)/event_loop.o
+	$(CC) $(CFLAGS) -c unix/event_loop.c -o $(OUTPUTS_DIR)/event_loop.o
 
 endif
 endif
 
 clean: 
-	$(RM) -rf $(OUTPUT_DIR)
+	$(RM) -rf $(OUTPUTS_DIR)
  
